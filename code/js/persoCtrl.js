@@ -1,26 +1,19 @@
 /*
-  But :     
-  Auteur : prénom + nom
-  Date :   jj.mm.aaaa / V1.0
+  But :     controleur de la vue personnages
+  Auteur : Brodard Clara
+  Date :   06.06.2023 / V1.0
 */
-class AccueilCtrl {
-  constructor(langue) {
-    this.changeTitre(langue);
-  }
-
-  changeTitre(langue){
-    if (langue === "en"){
-      $("#bienvenue").text("Good morning Vietnam");
-      // $("h3").css({"color":"red"});
-    }
-    if (langue === "de"){
-      $("#bienvenue").text("Grüss Got");
-    }
-    if (langue === "fr"){
-      $("#bienvenue").text("Tcho");
-    }
+class persoCtrl {
+  constructor() {
+    // Ajouter un écouteur par bouton. On est obligé de le faire là car l'objet n'est pas connu dans le html si on le fait directement dans l'html
+    // bouton maison et personnages
+    $("#compte-valider").click(() => {
+      this.validerCompte();
+    });
+    $("#compte-retour").click(() => {
+      this.retourLogin();
+    });
   }
 
 
-  
 }
