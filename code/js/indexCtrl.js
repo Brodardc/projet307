@@ -1,7 +1,7 @@
 /*
-  But :     
-  Auteur : prénom + nom
-  Date :   jj.mm.aaaa / V1.0
+  But :    controleur principal de l'application
+  Auteur : Brodard Clara
+  Date :   06.06.2023 / V1.0
 */
 
 $().ready(function () {
@@ -21,6 +21,8 @@ class IndexCtrl {
     alert(msg);
   }
 
+
+  //changer avec les bonnes vues
   // avec arrow function
   loadLogin() {
     this.vue.chargerVue("login", () => new LoginCtrl());
