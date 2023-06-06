@@ -1,7 +1,9 @@
 /*
- * Couche de services HTTP (worker). 
+ * Couche de services HTTP pour API ____(worker). 
  *
- * @author Jean-Claude Stritt / modif P-A Mettraux
+ * @author Brodard Clara
+ * date: 06.06.2023
+ * version: 1
  */
 class HttpService {
   constructor() {}
