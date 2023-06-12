@@ -24,20 +24,15 @@ class IndexCtrl {
 
   //changer avec les bonnes vues
   // avec arrow function
-  loadLogin() {
-    this.vue.chargerVue("login", () => new LoginCtrl());
+  loadPersonnages() {
+    this.vue.chargerVue("Personnage", () => new persoCtrl());
   }
 
   // avec function classique
-  loadAccueil(langue) {
-    this.vue.chargerVue("accueil", function () {
-      new AccueilCtrl(langue);
+  loadMaison() {
+    this.vue.chargerVue("Maison", function () {
+      new maisonCtrl();
     });
   }
 
-  loadCompte() {
-    this.vue.chargerVue("compte", function () {
-      new CompteCtrl();
-    })
-  }
 }
