@@ -37,14 +37,14 @@ class HttpService {
 
   /*
   */
-  login(identifiant, successCallback) {
+  login(maison, successCallback) {
 	// Uploade votre propre fichier PHP et adaptez l'URL ci-dessous.
     let url = "https://anapioficeandfire.com/api/houses";
-    let param = "name=" + identifiant.name + 
-      "&region="+identifiant.region + "&coatOfArms=" + identifiant.coatOfArms + 
-      "&words="+identifiant.words+ "&titles="+ identifiant.titles+ "&seats="+ identifiant.seats+
-      "&currentLord="+ identifiant.currentLord+ "&titles="+ identifiant.titles+ "&overlord="+ identifiant.overlord+ 
-      "&founded="+ identifiant.founded+ "&diedOut="+ identifiant.diedOut+ "&ancestralWeapons="+ identifiant.ancestralWeapons;
+    let param = "name=" + maison.name + 
+      "&region="+maison.region + "&coatOfArms=" + maison.coatOfArms + 
+      "&words="+maison.words+ "&titles="+ maison.titles+ "&seats="+ maison.seats+
+      "&currentLord="+ maison.currentLord+ "&titles="+ maison.titles+ "&overlord="+ maison.overlord+ 
+      "&founded="+ maison.founded+ "&diedOut="+ maison.diedOut+ "&ancestralWeapons="+ maison.ancestralWeapons;
 
     // envoi de la requête
     $.ajax(url, {
