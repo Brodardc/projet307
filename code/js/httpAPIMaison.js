@@ -5,8 +5,19 @@
  * date: 06.06.2023
  * version: 1
  */
-class HttpService {
-  constructor() {}
+class httpAPIMaison {
+  jsonM;
+  constructor() {
+
+    this.jsonM = null;
+
+    this.getAPI((data => {
+
+      this.jsonM = data;
+
+    }));
+
+  }
 
   /*
   **  $.ajaxSetup permet de définir une fois un élément sans le refaire par la suite. Ici cela se fait l'error
@@ -35,23 +46,20 @@ class HttpService {
     });
   }
 
-  /*
-  */
-  login(maison, successCallback) {
-	// Uploade votre propre fichier PHP et adaptez l'URL ci-dessous.
-    let url = "https://anapioficeandfire.com/api/houses";
-    let param = "name=" + maison.name + 
-      "&region="+maison.region + "&coatOfArms=" + maison.coatOfArms + 
-      "&words="+maison.words+ "&titles="+ maison.titles+ "&seats="+ maison.seats+
-      "&currentLord="+ maison.currentLord+ "&titles="+ maison.titles+ "&overlord="+ maison.overlord+ 
-      "&founded="+ maison.founded+ "&diedOut="+ maison.diedOut+ "&ancestralWeapons="+ maison.ancestralWeapons;
+  getAPI(successCallback) {
 
-    // envoi de la requête
-    $.ajax(url, {
+    $.ajax({
+
       type: "GET",
-      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-      data: param,
+
+      url: "https://anapioficeandfire.com/api/houses",
+
       success: successCallback
+
     });
+
   }
+
+
 }
+
