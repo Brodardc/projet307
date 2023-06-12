@@ -39,14 +39,14 @@ class HttpService {
   */
   login(identifiant, successCallback) {
 	// Uploade votre propre fichier PHP et adaptez l'URL ci-dessous.
-    let url = "https://brodardc.emf-informatique.ch/exercices307/ex20/php/login20.php";
-    let param = "username=" + identifiant.username + 
-      "&password="+identifiant.password + "&domaine=" + identifiant.domaine + 
-      "&mail="+identifiant.mail+ "&langue="+ identifiant.langue;
+    let url = "https://thronesapi.com/api/v2/Characters";
+    let param = "firstName=" + identifiant.firstName + 
+      "&lastname="+identifiant.lastName + "&fullName=" + identifiant.fullName + 
+      "&title="+identifiant.title+ "&imageUrl="+ identifiant.imageUrl;
 
     // envoi de la requête
     $.ajax(url, {
-      type: "POST",
+      type: "GET",
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
       data: param,
       success: successCallback
