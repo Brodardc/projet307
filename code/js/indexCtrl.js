@@ -25,12 +25,12 @@ class IndexCtrl {
   //changer avec les bonnes vues
   // avec arrow function
   loadPersonnages() {
-    this.vue.chargerVue("Personnage", () => new persoCtrl());
+    this.vue.chargerVue("personnages", () => new persoCtrl());
   }
 
   // avec function classique
   loadMaison() {
-    this.vue.chargerVue("Maison", function () {
+    this.vue.chargerVue("maisons", function () {
       new maisonCtrl();
     });
   }
