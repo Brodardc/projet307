@@ -7,12 +7,10 @@ class maisonCtrl {
   constructor() {
     // Ajouter un écouteur par bouton. On est obligé de le faire là car l'objet n'est pas connu dans le html si on le fait directement dans l'html
     // bouton maison et personnages
-    $("#compte-valider").click(() => {
-      this.validerCompte();
+    $("#affichePersonnages").click(() => {
+      this.loadPersonnages();
     });
-    $("#compte-retour").click(() => {
-      this.retourLogin();
-    });
+
   }
 
   validerCompte() {
@@ -41,7 +39,7 @@ class maisonCtrl {
     }
   }
 
-  retourLogin() {
-    indexCtrl.loadLogin();
+  loadPersonnages() {
+    indexCtrl.loadPersonnages();
   }
 }
