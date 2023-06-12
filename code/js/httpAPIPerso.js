@@ -37,7 +37,7 @@ class HttpService {
 
   /*
   */
-  login(identifiant, successCallback) {
+  login(perso, successCallback) {
 	// Uploade votre propre fichier PHP et adaptez l'URL ci-dessous.
     let url = "https://thronesapi.com/api/v2/Characters";
     let param = "firstName=" + identifiant.firstName + 
