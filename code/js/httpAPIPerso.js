@@ -5,8 +5,17 @@
  * date: 06.06.2023
  * version: 1
  */
-class HttpService {
-  constructor() {}
+class HttpAPIPersos {
+  jsonP;
+  constructor() {
+
+    this.jsonP = null;
+
+    this.getAPI(((data) => {
+      this.jsonP = data;
+    }));
+
+  }
 
   /*
   **  $.ajaxSetup permet de définir une fois un élément sans le refaire par la suite. Ici cela se fait l'error
@@ -37,19 +46,13 @@ class HttpService {
 
   /*
   */
-  login(perso, successCallback) {
-	// Uploade votre propre fichier PHP et adaptez l'URL ci-dessous.
-    let url = "https://thronesapi.com/api/v2/Characters";
-    let param = "firstName=" + identifiant.firstName + 
-      "&lastname="+identifiant.lastName + "&fullName=" + identifiant.fullName + 
-      "&title="+identifiant.title+ "&imageUrl="+ identifiant.imageUrl;
+  getAPI(successCallback) {
 
-    // envoi de la requête
-    $.ajax(url, {
+    $.ajax({
       type: "GET",
-      contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-      data: param,
+      url: "https://thronesapi.com/api/v2/Characters",
       success: successCallback
     });
+
   }
 }
