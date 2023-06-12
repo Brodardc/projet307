@@ -6,15 +6,24 @@
 
 $().ready(function () {
   // service et indexCtrl sont des variables globales qui doivent être accessible depuis partout => pas de mot clé devant ou window.xxx
-  http = new HttpService();
+  httpApiP = new HttpAPIPersos();
+  httpApiM = new httpAPIMaison();
   indexCtrl = new IndexCtrl();  // ctrl principal
-  http.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
+  httpApiP.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
+  httpApiM.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
+  maison = null;
+  perso = null;
+  accueil=null;
+  $("input").click(() =>{
+    $("#container").slideUp(0).slideDown(2000);});
 });
 
 class IndexCtrl {
   constructor() {
     this.vue = new VueService();
+    this.loadMaison();
     this.loadPersonnages();
+    this.loadAccueil();
   }
 
   afficherErreurHttp(msg) {
@@ -25,14 +34,18 @@ class IndexCtrl {
   //changer avec les bonnes vues
   // avec arrow function
   loadPersonnages() {
-    this.vue.chargerVue("personnages", () => new persoCtrl());
+    this.vue.chargerVue("personnages", () => this.perso = new persoCtrl());
+    
   }
 
   // avec function classique
   loadMaison() {
-    this.vue.chargerVue("maisons", function () {
-      new maisonCtrl();
-    });
+    this.vue.chargerVue("maisons", () => this.maison = new maisonCtrl());
+    
   }
 
+  loadAccueil() {
+    this.vue.chargerVue("accueil", () => this.acc = new maisonCtrl());
+    
+  }
 }
