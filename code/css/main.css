@@ -9,63 +9,57 @@ body {
 
 #container {
   background-color: indianred;
-  width: 90%;
+  width: 80%;
   padding: 1em;
   border: 1px solid black;
   margin: auto;
   font-family: Verdana, Arial, serif;
+  
 }
 
-/* pour aligner les champs du formulaire */
-/*.user-form {
-  /*  padding: 0em;
-}*/
-
-.user-form .field {
+.affichePerso{
+  background-color: bisque;
+  border: 1px solid black;
   padding: 0.5em;
-  background: #eeeeee;
+  margin: 0.25em;
+  width: 20em;
 }
 
-.user-form .field label {
-  display: inline-block;
+#afficherPero{
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.afficheMaison{
+  background-color: palegoldenrod;
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 0.25em;
+  width: 15em;
+}
+
+#afficherMaison{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#title{
+  font-size: 4em;
+  margin: 20px;
+}
+#atitle{
+  font-size: 3em;
+  margin: 20px;
+}
+#Ptitle{
+  margin: 20px;
+}
+
+input{
+  background-color: bisque;
   width: 10em;
-}
-
-.user-form .field input,radio {
-  display: inline-block;
-}
-
-#langue {
-  display: inline-block;
-}
-
-
-.but-valider {
-    font-size: 1em;
-    width: 7em;
-    border-radius: 1em;
-    background-color: greenyellow;
-    margin-top: 15px;
-}
-
-.but-invalider {
-  font-size: 1em;
-  width: 7em;
-  border-radius: 1em;
-  background-color: red;
-  margin-top: 15px;
-  color: white;
-}
-
-/* .user-form input[type=button] {
-  font-size: 1em;
-  width: 7em;
-  border-radius: 1em;
-  background-color: greenyellow;
-  margin-top: 15px;
-} */
-
-#creer {
-  text-decoration: none;
-  padding-left: 252px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 2em;
+  margin-left: 20px;
 }
