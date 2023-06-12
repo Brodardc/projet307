@@ -14,7 +14,7 @@ $().ready(function () {
 class IndexCtrl {
   constructor() {
     this.vue = new VueService();
-    this.loadLogin();
+    this.loadPersonnages();
   }
 
   afficherErreurHttp(msg) {
