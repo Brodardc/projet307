@@ -26,12 +26,20 @@
    <body >
       <div id="atitle">
          <p id="Ptitle">Game of Thrones project</p>
-         <input type="button" id="affichePersonnages" value="Personnages">
-         <input type="button" id="afficheMaison" value="maisons">
+         <a href id="Mmenu"class="menu">Menu</a>
+         <ul class="menu" style="display: block;">
+            <li class="lien" id="affichePersonnages">
+               <a>Personnages</a>
+            </li>
+            <li class="lien" id="afficheMaison">
+               <a>Maisons</a>
+            </li>
+         </ul>
+
       </div>
       <div id="container">
           <!-- calque pour les differentes vues -->
-        <div id="view"></div>
+        <div  id="view"></div>
       </div>  <!-- fin du conteneur -->
 
    </body>
