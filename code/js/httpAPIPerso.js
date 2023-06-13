@@ -13,6 +13,8 @@ class HttpAPIPersos {
 
     this.getAPI(((data) => {
       this.jsonP = data;
+      indexCtrl.loadPersonnages();
+
     }));
 
   }
