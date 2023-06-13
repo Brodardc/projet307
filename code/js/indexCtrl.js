@@ -11,19 +11,18 @@ $().ready(function () {
   indexCtrl = new IndexCtrl();  // ctrl principal
   httpApiP.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
   httpApiM.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
-  maison = null;
-  perso = null;
-  accueil=null;
-  $("input").click(() =>{
-    $("#container").slideUp(0).slideDown(2000);});
+  $("li").click(() => {
+    $("#container").slideUp(0).slideDown(2000);
+  });
+  $("a.menu").click(function () {
+    $(this).next().slideToggle("slow");
+    return false;
+  });
 });
 
 class IndexCtrl {
   constructor() {
     this.vue = new VueService();
-    this.loadMaison();
-    this.loadPersonnages();
-    this.loadAccueil();
   }
 
   afficherErreurHttp(msg) {
@@ -34,18 +33,13 @@ class IndexCtrl {
   //changer avec les bonnes vues
   // avec arrow function
   loadPersonnages() {
-    this.vue.chargerVue("personnages", () => this.perso = new persoCtrl());
-    
+    this.vue.chargerVue("personnages", () => new persoCtrl());
+
   }
 
   // avec function classique
   loadMaison() {
-    this.vue.chargerVue("maisons", () => this.maison = new maisonCtrl());
-    
-  }
+    this.vue.chargerVue("maisons", () => new maisonCtrl());
 
-  loadAccueil() {
-    this.vue.chargerVue("accueil", () => this.acc = new maisonCtrl());
-    
   }
 }
