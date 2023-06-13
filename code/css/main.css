@@ -55,6 +55,16 @@ body {
   margin: 20px;
 }
 
+#nom{
+  font-weight: bold;
+  
+}
+
+#nomMaison{
+  font-weight: bold;
+  text-decoration: overline;
+}
+
 input{
   background-color: bisque;
   width: 10em;
@@ -62,4 +72,35 @@ input{
   font-size: 20px;
   margin-bottom: 2em;
   margin-left: 20px;
+  border-radius: 8px;
+}
+
+.menu{
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+ul{
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+  height: var(--hauteur-menu);
+}
+
+li{
+  background-color: rgb(252, 220, 162);
+  position: relative;
+  height: 100%;
+  flex: 1;
+  list-style-type: none;
+
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: rgb(240, 183, 97);
 }
