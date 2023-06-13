@@ -12,9 +12,8 @@ class httpAPIMaison {
     this.jsonM = null;
 
     this.getAPI((data => {
-
       this.jsonM = data;
-
+      indexCtrl.loadMaison();
     }));
 
   }
