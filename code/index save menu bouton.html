@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+   But :    projet 307 - Games of thrones
+   Auteur : clara brodard
+   Date :   06.06.2023 / V1.0 
+   -->
+  
+  <!-- entête de la page -->
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" href="images/logo.png" /> <!--trouver une image en rapport avec le sujet!-->
+      <link rel= "stylesheet" href= "css/main.css" >
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <script type="text/javascript" src="js/indexCtrl.js"></script>
+      <script type="text/javascript" src="js/httpAPIMaison.js"></script>
+      <script type="text/javascript" src="js/httpAPIPerso.js"></script>
+      <script type="text/javascript" src="js/vueService.js"></script>
+      <script type="text/javascript" src="js/maisonCtrl.js"></script>
+      <script type="text/javascript" src="js/persoCtrl.js"></script>
+      <title>projet 307 - Games of Thrones</title>
+   </head>
+
+   <!-- corps de la page -->
+   <body >
+      <div id="atitle">
+         <p id="Ptitle">Game of Thrones project</p>
+         <input type="button" id="affichePersonnages" value="Personnages">
+         <input type="button" id="afficheMaison" value="maisons">
+      </div>
+      <div id="container">
+          <!-- calque pour les differentes vues -->
+        <div id="view"></div>
+      </div>  <!-- fin du conteneur -->
+
+   </body>
+
+</html>
